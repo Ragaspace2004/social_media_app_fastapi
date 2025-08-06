@@ -115,6 +115,7 @@ htmlcov/
 
 # Documentation
 docs/_build/
+important_to_note.txt
 
 # PyCharm
 .idea/
@@ -141,6 +142,10 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+#setup
+setup/
+.vscode/
 
 # Spyder project settings
 .spyderproject
