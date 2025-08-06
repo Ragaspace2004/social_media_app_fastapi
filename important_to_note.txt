@@ -1,0 +1,3 @@
+for mysql --> define Length for table attributes
+
+since every component is defined as a package using __init__.py --> for importing just use the package name directly don't use ..
