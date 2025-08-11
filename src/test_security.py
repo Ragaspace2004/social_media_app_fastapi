@@ -359,7 +359,7 @@ class SecurityTester:
         with open("security_test_results.json", "w") as f:
             json.dump(self.test_results, f, indent=2)
         
-        print(f"\n📄 Detailed results saved to: security_test_results.json")
+        print(f"\nDetailed results saved to: security_test_results.json")
 
 if __name__ == "__main__":
     print("Make sure your FastAPI server is running on http://localhost:8000")
