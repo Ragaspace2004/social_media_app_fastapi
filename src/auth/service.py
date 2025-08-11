@@ -8,43 +8,57 @@ from .schemas import UserCreate,UserUpdate
 from passlib.context import CryptContext
 from fastapi.security import OAuth2PasswordBearer
 from jose import jwt,JWTError
-
-import os
-from dotenv import load_dotenv
-load_dotenv()
+from database import get_db
+from config import settings
+from logger import log_security_event
+from security_utils import account_protection
 
 bcyrpt_context=CryptContext(schemes=["bcrypt"],deprecated="auto")
-oauth2_bearer=OAuth2PasswordBearer(tokenUrl="auth/login")
-SECRET_KEY=os.getenv("SECRET_KEY")
-ALGORITHM=os.getenv("ALGORITHM")
-TOKEN_EXPIRATION_MINUTES=os.getenv("TOKEN_EXPIRATION_MINUTES")
+oauth2_bearer=OAuth2PasswordBearer(tokenUrl="/v1/auth/login")
 
-#exixting user check
+#exixting user check with proper SQL injection protection
 async def existing_user(db:Session,username:str,email:str):
-    db_user_username=db.query(User).filter(User.username==username).first()
-    db_user_email=db.query(User).filter(User.email==email).first()
+    # Sanitize inputs to prevent SQL injection
+    username = username.strip() if username else ""
+    email = email.strip() if email else ""
+    
+    # Use parameterized queries (SQLAlchemy ORM provides this by default)
+    db_user_username = None
+    db_user_email = None
+    
+    if username:
+        db_user_username=db.query(User).filter(User.username==username).first()
+    if email:
+        db_user_email=db.query(User).filter(User.email==email).first()
+    
     return db_user_username or db_user_email
 
 #create access token
 async def create_access_token(username:str, id:int):
     encode={"sub":username,"id":id}
-    expires=datetime.utcnow()+timedelta(int(minutes=TOKEN_EXPIRATION_MINUTES))
+    expires=datetime.utcnow()+timedelta(minutes=settings.token_expiration_minutes)
     encode.update({"exp":expires})
-    return jwt.encode(encode,SECRET_KEY,algorithm=ALGORITHM)
+    return jwt.encode(encode,settings.secret_key,algorithm=settings.algorithm)
   
 #get user from token
-async def get_current_user(db:Session, token:str=Depends(oauth2_bearer)):
+async def get_current_user(db:Session=Depends(get_db), token:str=Depends(oauth2_bearer)):
     try:
-      payload=jwt.decode(token,SECRET_KEY,algorithms=[ALGORITHM])
+      payload=jwt.decode(token,settings.secret_key,algorithms=[settings.algorithm])
       username:str=payload.get("sub")
       id:int=payload.get("id")
       expires:datetime=payload.get("exp")
       if expires and datetime.fromtimestamp(expires)<datetime.utcnow():
+        log_security_event("expired_token", {"username": username})
         return None
       if username is None or id is None:
+        log_security_event("invalid_token", {"reason": "Missing username or id"})
         return None
-      return db.query(User).filter(User.id==id).first()
-    except JWTError:
+      user = db.query(User).filter(User.id==id).first()
+      if not user:
+        log_security_event("user_not_found", {"username": username, "user_id": id})
+      return user
+    except JWTError as e:
+      log_security_event("invalid_token", {"reason": str(e)})
       return None
 
 #get user from user_id
@@ -70,14 +84,80 @@ async def create_user(db:Session, user:UserCreate):
   
   
   
-#auth
-async def authenticate(db:Session, username:str, password:str):
-  db_user=await existing_user(db, username, "")
-  if not db_user:
-    return None
-  if not bcyrpt_context.verify(password, db_user.hashed_password):
-    return None
-  return db_user
+#auth - Authenticate user with account lockout protection and SQL injection prevention
+async def authenticate(db:Session, username:str, password:str, client_ip: str = None):   
+    # Input validation and sanitization for SQL injection prevention
+    if not username or not password:
+        log_security_event("login_failed", {
+            "username": username or "EMPTY",
+            "ip": client_ip,
+            "reason": "Empty username or password"
+        })
+        return {"locked": False, "user": None}
+    
+    # Strip and validate input length
+    username = username.strip()
+    password = password.strip()
+    
+    if len(username) > 50 or len(password) > 200:  # Prevent overly long inputs
+        log_security_event("login_failed", {
+            "username": username[:50],  # Log only first 50 chars
+            "ip": client_ip,
+            "reason": "Input too long - potential attack"
+        })
+        return {"locked": False, "user": None}
+    
+    # Check for SQL injection patterns
+    sql_patterns = ["'", '"', ";", "--", "/*", "*/", "xp_", "sp_", "UNION", "SELECT", "DROP", "DELETE", "INSERT", "UPDATE"]
+    for pattern in sql_patterns:
+        if pattern.upper() in username.upper() or pattern.upper() in password.upper():
+            log_security_event("sql_injection_attempt", {
+                "username": username,
+                "ip": client_ip,
+                "reason": f"SQL injection pattern detected: {pattern}"
+            })
+            return {"locked": False, "user": None}
+    
+    # Check if account/IP is locked
+    if account_protection.is_locked(username):
+        log_security_event("account_locked_attempt", {
+            "username": username,
+            "ip": client_ip,
+            "reason": "Account locked due to too many failed attempts"
+        })
+        return {"locked": True, "user": None}
+    
+    db_user=await existing_user(db, username, "")
+    if not db_user:
+        # Record failed attempt
+        account_protection.record_failed_attempt(username)
+        log_security_event("login_failed", {
+            "username": username,
+            "ip": client_ip,
+            "reason": "User not found"
+        })
+        return {"locked": False, "user": None}
+    
+    if not bcyrpt_context.verify(password, db_user.hashed_password):
+        # Record failed attempt
+        should_lock = account_protection.record_failed_attempt(username)
+        log_security_event("login_failed", {
+            "username": username,
+            "ip": client_ip,
+            "reason": "Invalid password",
+            "locked": should_lock
+        })
+        return {"locked": should_lock, "user": None}
+    
+    # Successful login - clear failed attempts
+    account_protection.record_successful_login(username)
+    log_security_event("login_success", {
+        "username": username,
+        "user_id": db_user.id,
+        "ip": client_ip
+    })
+    
+    return {"locked": False, "user": db_user}
 
 #update user
 async def update_user(db:Session, db_user:User, user:UserUpdate):

@@ -1,3 +1,24 @@
 for mysql --> define Length for table attributes
 
 since every component is defined as a package using __init__.py --> for importing just use the package name directly don't use ..
+
+
+git new commands
+
+git add --force src/
+
+git push origin --delete <branch_name>
+
+
+mysql+oauth2 -->basic
+
+v2 --> added fastapi injection by headers , planned to encrypt the ids
+
+pending
+- input validation - email,password strength
+- environment variables validation
+- cors
+- rate limiting
+- logging
+- error handling
+- headers (middleware)
