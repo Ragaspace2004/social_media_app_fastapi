@@ -111,17 +111,17 @@ def test_password_validation():
         
         # Test cases: (password, should_pass)
         test_cases = [
-            ("SecurePass123!", True),    # Strong password
-            ("AnotherGood1@", True),     # Another strong password  
-            ("123456", False),           # Too short, common
-            ("password", False),         # Common password
-            ("abc123", False),           # No uppercase/special
-            ("PASSWORD123", False),      # No special chars
-            ("Pass@", False),            # Too short
-            ("longpassword", False),     # No uppercase/numbers/special
-            ("LONGPASSWORD", False),     # No lowercase/numbers/special
-            ("LongPassword", False),     # No numbers/special
-            ("qwerty", False),           # Common password
+            ("SecurePass123!", True),    
+            ("AnotherGood1@", True),      
+            ("123456", False),        
+            ("password", False),        
+            ("abc123", False),           
+            ("PASSWORD123", False),      
+            ("Pass@", False),            
+            ("longpassword", False),   
+            ("LONGPASSWORD", False),     
+            ("LongPassword", False),     
+            ("qwerty", False),           
         ]
         
         passed = 0
@@ -229,7 +229,7 @@ def test_post_sanitization():
 
 def test_rate_limiter():
     """Test rate limiting functionality"""
-    print("\n🚦 Testing Rate Limiter...")
+    print("\nTesting Rate Limiter...")
     
     try:
         from rate_limiter import simple_rate_limiter
@@ -255,7 +255,6 @@ def test_rate_limiter():
 def main():
     """Run all security tests"""
     print("AUTOMATED SECURITY TESTING")
-    print("=" * 60)
     print("Testing security features...\n")
     
     tests = [
@@ -279,7 +278,6 @@ def main():
     # Summary
     print("\n" + "=" * 60)
     print("SECURITY TEST SUMMARY")
-    print("=" * 60)
     
     security_score = (passed_tests / total_tests) * 100
     
@@ -299,9 +297,6 @@ def main():
         print("\n SECURITY IMPROVEMENTS NEEDED!")
         print(" Several security features need attention.")
         print("Security Rating: 6.0/10 - Needs Work!")
-    
-    print(f"\nTo test with live server, run: python SECURITY_TEST_GUIDE.py")
-    print(f"Start server with: uvicorn main:app --reload")
 
 if __name__ == "__main__":
     main()

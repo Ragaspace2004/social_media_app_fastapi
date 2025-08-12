@@ -2,11 +2,16 @@ import logging
 import json
 import os
 from datetime import datetime
+import pytz
 
 class JSONFormatter(logging.Formatter):
     def format(self,record):
+        # Get IST timezone
+        ist = pytz.timezone('Asia/Kolkata')
+        ist_time = datetime.now(ist)
+        
         log_entry = {
-          "timestamp":datetime.utcnow().isoformat()+'Z',
+          "timestamp": ist_time.strftime('%Y-%m-%d %H:%M:%S IST'),
           "level":record.levelname,
           "logger":record.name,
           "message":record.getMessage()
@@ -28,14 +33,22 @@ class JSONFormatter(logging.Formatter):
       
 # Create logs directory if it doesn't exist
 def setup_logger():
-    if not os.path.exists('logs'):
-        os.makedirs('logs')
+    # Get project root directory (parent of src directory)
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(current_dir)
+    logs_dir = os.path.join(project_root, 'logs')
+    
+    if not os.path.exists(logs_dir):
+        os.makedirs(logs_dir)
         
     console_formatter = logging.Formatter(
-      '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+      '%(asctime)s IST - %(name)s - %(levelname)s - %(message)s'
     )
+    # Set IST timezone for console output
+    console_formatter.converter = lambda *args: datetime.now(pytz.timezone('Asia/Kolkata')).timetuple()
     json_formatter=JSONFormatter()
-    file_handler = logging.FileHandler('logs/app.json')
+    log_file_path = os.path.join(logs_dir, 'app.json')
+    file_handler = logging.FileHandler(log_file_path)
     file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(json_formatter)
     

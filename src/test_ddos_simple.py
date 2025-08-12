@@ -121,7 +121,7 @@ class SimpleDDoSTest:
         self.analyze_and_print_results(results, "Distributed IP Attack")
         return results
     
-    # 4. Test rate limiting on authentication endpoint
+    # 5. Test rate limiting on authentication endpoint
     def auth_endpoint_test(self, num_attempts=50):
         print(f"\nAUTH ENDPOINT ATTACK TEST")
         print(f"Testing {num_attempts} login attempts")

@@ -1232,3 +1232,930 @@
 {"timestamp": "2025-08-10T17:14:57.069370Z", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00066s] ('testuser', 1, 0)"}
 {"timestamp": "2025-08-10T17:14:57.075000Z", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
 {"timestamp": "2025-08-10T17:14:57.076731Z", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST http://testserver/v1/test/register \"HTTP/1.1 500 Internal Server Error\""}
+{"timestamp": "2025-08-11 22:31:25 IST", "level": "INFO", "logger": "SECURITY", "message": "INFO - Logger test - IST timezone check", "event_type": "info"}
+{"timestamp": "2025-08-11 22:31:25 IST", "level": "INFO", "logger": "SECURITY", "message": "LOGIN SUCCESS - User: test_user", "event_type": "login_success", "username": "test_user", "ip_address": "127.0.0.1"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 11:52:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 11:54:25 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:54:25 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:54:25 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00075s] {'username_1': 'user9', 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:54:25 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.email = %(email_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:54:25 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00064s] {'email_1': 'user9@example.com', 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:54:25 IST", "level": "WARNING", "logger": "passlib.handlers.bcrypt", "message": "(trapped) error reading bcrypt version"}
+{"timestamp": "2025-08-12 11:54:25 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "INSERT INTO user (email, username, name, hashed_password, created_at, dob, gender, profile_pic, bio, location, followers_count, following_count) VALUES (%(email)s, %(username)s, %(name)s, %(hashed_password)s, now(), %(dob)s, %(gender)s, %(profile_pic)s, %(bio)s, %(location)s, %(followers_count)s, %(following_count)s)"}
+{"timestamp": "2025-08-12 11:54:25 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00070s] {'email': 'user9@example.com', 'username': 'user9', 'name': 'usersilent', 'hashed_password': '$2b$12$O5k4WicIejS.xcauEeb0veTVUkrtuzqifU1wy6.dJ6IjTk3yzqtRm', 'dob': datetime.date(2025, 8, 12), 'gender': 'MALE', 'profile_pic': 'string', 'bio': 'string', 'location': 'string', 'followers_count': 0, 'following_count': 0}"}
+{"timestamp": "2025-08-12 11:54:25 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 11:54:25 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:54:25 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id, user.email, user.username, user.name, user.hashed_password, user.created_at, user.dob, user.gender, user.profile_pic, user.bio, user.location, user.followers_count, user.following_count \nFROM user \nWHERE user.id = %(pk_1)s"}
+{"timestamp": "2025-08-12 11:54:25 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00060s] {'pk_1': 24}"}
+{"timestamp": "2025-08-12 11:54:25 IST", "level": "INFO", "logger": "SECURITY", "message": "AUTH SUCCESS - User:SIGNUP:user9, IP:127.0.0.1", "event_type": "auth_success", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"}
+{"timestamp": "2025-08-12 11:54:25 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 11:55:07 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:55:07 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:55:07 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 41.7s ago] {'username_1': 'usersilent', 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:55:07 IST", "level": "INFO", "logger": "SECURITY", "message": "LOGIN FAILED - User: usersilent, Reason: User not found", "event_type": "login_failed", "username": "usersilent", "reason": "User not found"}
+{"timestamp": "2025-08-12 11:55:07 IST", "level": "INFO", "logger": "SECURITY", "message": "AUTH FAILED - User:usersilent, IP:127.0.0.1, Reason:incorrect username or password", "event_type": "auth_failed", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"}
+{"timestamp": "2025-08-12 11:55:07 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 11:55:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:55:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:55:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 68.17s ago] {'username_1': 'user9', 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:55:33 IST", "level": "INFO", "logger": "SECURITY", "message": "LOGIN SUCCESS - User: user9", "event_type": "login_success", "username": "user9"}
+{"timestamp": "2025-08-12 11:55:33 IST", "level": "INFO", "logger": "SECURITY", "message": "AUTH SUCCESS - User:LOGIN:user9, IP:127.0.0.1", "event_type": "auth_success", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"}
+{"timestamp": "2025-08-12 11:55:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 11:55:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:55:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:55:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00045s] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:55:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 11:55:55 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:55:55 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:55:55 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 9.908s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:55:55 IST", "level": "INFO", "logger": "SECURITY", "message": "USER ACTION - User:user9, Action:profile_update, Details:profile updated successfully", "event_type": "user_action"}
+{"timestamp": "2025-08-12 11:55:55 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "UPDATE user SET name=%(name)s WHERE user.id = %(user_id)s"}
+{"timestamp": "2025-08-12 11:55:55 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00202s] {'name': 'string', 'user_id': 24}"}
+{"timestamp": "2025-08-12 11:55:55 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 32.29s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT hashtags.id AS hashtags_id, hashtags.name AS hashtags_name \nFROM hashtags \nWHERE hashtags.name = %(name_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00062s] {'name_1': 'new', 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "INSERT INTO hashtags (name) VALUES (%(name)s)"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00130s] {'name': 'new'}"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "INSERT INTO posts (content, image, location, created_at, likes_count, author_id) VALUES (%(content)s, %(image)s, %(location)s, now(), %(likes_count)s, %(author_id)s)"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00065s] {'content': 'string #new', 'image': 'string', 'location': 'string', 'likes_count': 0, 'author_id': 24}"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT hashtags.id AS hashtags_id, hashtags.name AS hashtags_name \nFROM hashtags \nWHERE hashtags.id = %(pk_1)s"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00051s] {'pk_1': 18}"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "INSERT INTO post_hashtags (post_id, hashtag_id) VALUES (%(post_id)s, %(hashtag_id)s)"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00051s] {'post_id': 12, 'hashtag_id': 18}"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT posts.id AS posts_id, posts.content AS posts_content, posts.image AS posts_image, posts.location AS posts_location, posts.created_at AS posts_created_at, posts.likes_count AS posts_likes_count, posts.author_id AS posts_author_id \nFROM posts \nWHERE posts.id = %(pk_1)s"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00051s] {'pk_1': 12}"}
+{"timestamp": "2025-08-12 11:56:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 11:57:00 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:57:00 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:57:00 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 74.51s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:57:00 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 11:57:23 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:57:23 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:57:23 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 98.25s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:57:23 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT posts.id AS posts_id, posts.content AS posts_content, posts.image AS posts_image, posts.location AS posts_location, posts.created_at AS posts_created_at, posts.likes_count AS posts_likes_count, posts.author_id AS posts_author_id \nFROM posts \nWHERE posts.author_id = %(author_id_1)s ORDER BY posts.created_at DESC"}
+{"timestamp": "2025-08-12 11:57:23 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00065s] {'author_id_1': 24}"}
+{"timestamp": "2025-08-12 11:57:23 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 11:57:35 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:57:35 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:57:35 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 189.8s ago] {'username_1': 'deepa', 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:57:35 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT posts.id AS posts_id, posts.content AS posts_content, posts.image AS posts_image, posts.location AS posts_location, posts.created_at AS posts_created_at, posts.likes_count AS posts_likes_count, posts.author_id AS posts_author_id \nFROM posts \nWHERE posts.author_id = %(author_id_1)s ORDER BY posts.created_at DESC"}
+{"timestamp": "2025-08-12 11:57:35 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 11.32s ago] {'author_id_1': 4}"}
+{"timestamp": "2025-08-12 11:57:35 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 11:57:44 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:57:44 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT hashtags.id AS hashtags_id, hashtags.name AS hashtags_name \nFROM hashtags \nWHERE hashtags.name = %(name_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:57:44 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 86.88s ago] {'name_1': 'new', 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:57:44 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT posts.id AS posts_id, posts.content AS posts_content, posts.image AS posts_image, posts.location AS posts_location, posts.created_at AS posts_created_at, posts.likes_count AS posts_likes_count, posts.author_id AS posts_author_id \nFROM posts, post_hashtags \nWHERE %(param_1)s = post_hashtags.hashtag_id AND posts.id = post_hashtags.post_id"}
+{"timestamp": "2025-08-12 11:57:44 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00090s] {'param_1': 18}"}
+{"timestamp": "2025-08-12 11:57:44 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 11:57:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:57:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT count(*) AS count_1 \nFROM (SELECT posts.id AS posts_id, posts.content AS posts_content, posts.image AS posts_image, posts.location AS posts_location, posts.created_at AS posts_created_at, posts.likes_count AS posts_likes_count, posts.author_id AS posts_author_id \nFROM posts) AS anon_1"}
+{"timestamp": "2025-08-12 11:57:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00063s] {}"}
+{"timestamp": "2025-08-12 11:57:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT posts.id AS posts_id, posts.content AS posts_content, posts.image AS posts_image, posts.location AS posts_location, posts.created_at AS posts_created_at, posts.likes_count AS posts_likes_count, posts.author_id AS posts_author_id, user.username AS user_username \nFROM posts INNER JOIN user ON user.id = posts.author_id ORDER BY posts.created_at DESC \n LIMIT %(param_1)s, %(param_2)s"}
+{"timestamp": "2025-08-12 11:57:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00609s] {'param_1': 0, 'param_2': 5}"}
+{"timestamp": "2025-08-12 11:57:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 137.1s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT posts.id AS posts_id, posts.content AS posts_content, posts.image AS posts_image, posts.location AS posts_location, posts.created_at AS posts_created_at, posts.likes_count AS posts_likes_count, posts.author_id AS posts_author_id \nFROM posts \nWHERE posts.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00328s] {'id_1': 12, 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 217.4s ago] {'username_1': 'user9', 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user, post_likes \nWHERE %(param_1)s = post_likes.post_id AND user.id = post_likes.user_id"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00324s] {'param_1': 12}"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "INSERT INTO activity (username, timestamp, liked_post_id, username_liked, liked_post_image, followed_username, followed_user_pic) VALUES (%(username)s, now(), %(liked_post_id)s, %(username_liked)s, %(liked_post_image)s, %(followed_username)s, %(followed_user_pic)s)"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00058s] {'username': 'user9', 'liked_post_id': 12, 'username_liked': 'user9', 'liked_post_image': 'string', 'followed_username': None, 'followed_user_pic': None}"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "UPDATE posts SET likes_count=%(likes_count)s WHERE posts.id = %(posts_id)s"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00066s] {'likes_count': 1, 'posts_id': 12}"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "INSERT INTO post_likes (user_id, post_id) VALUES (%(user_id)s, %(post_id)s)"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00060s] {'user_id': 24, 'post_id': 12}"}
+{"timestamp": "2025-08-12 11:58:02 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 11:58:17 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:58:17 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:58:17 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 152.3s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:58:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT posts.id AS posts_id, posts.content AS posts_content, posts.image AS posts_image, posts.location AS posts_location, posts.created_at AS posts_created_at, posts.likes_count AS posts_likes_count, posts.author_id AS posts_author_id \nFROM posts \nWHERE posts.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:58:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 15.14s ago] {'id_1': 12, 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:58:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:58:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 232.5s ago] {'username_1': 'user9', 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:58:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user, post_likes \nWHERE %(param_1)s = post_likes.post_id AND user.id = post_likes.user_id"}
+{"timestamp": "2025-08-12 11:58:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 15.14s ago] {'param_1': 12}"}
+{"timestamp": "2025-08-12 11:58:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "UPDATE posts SET likes_count=%(likes_count)s WHERE posts.id = %(posts_id)s"}
+{"timestamp": "2025-08-12 11:58:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 15.13s ago] {'likes_count': 0, 'posts_id': 12}"}
+{"timestamp": "2025-08-12 11:58:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DELETE FROM post_likes WHERE post_likes.user_id = %(user_id)s AND post_likes.post_id = %(post_id)s"}
+{"timestamp": "2025-08-12 11:58:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00050s] {'user_id': 24, 'post_id': 12}"}
+{"timestamp": "2025-08-12 11:58:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 11:58:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 11:58:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT posts.id AS posts_id, posts.content AS posts_content, posts.image AS posts_image, posts.location AS posts_location, posts.created_at AS posts_created_at, posts.likes_count AS posts_likes_count, posts.author_id AS posts_author_id \nFROM posts \nWHERE posts.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 11:58:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 21.96s ago] {'id_1': 12, 'param_1': 1}"}
+{"timestamp": "2025-08-12 11:58:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user, post_likes \nWHERE %(param_1)s = post_likes.post_id AND user.id = post_likes.user_id"}
+{"timestamp": "2025-08-12 11:58:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 21.96s ago] {'param_1': 12}"}
+{"timestamp": "2025-08-12 11:58:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 12:01:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:01:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT posts.id AS posts_id, posts.content AS posts_content, posts.image AS posts_image, posts.location AS posts_location, posts.created_at AS posts_created_at, posts.likes_count AS posts_likes_count, posts.author_id AS posts_author_id \nFROM posts \nWHERE posts.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:01:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 203.6s ago] {'id_1': 12, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:01:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 12:01:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:01:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:01:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 346.9s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:01:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT activity.id AS activity_id, activity.username AS activity_username, activity.timestamp AS activity_timestamp, activity.liked_post_id AS activity_liked_post_id, activity.username_liked AS activity_username_liked, activity.liked_post_image AS activity_liked_post_image, activity.followed_username AS activity_followed_username, activity.followed_user_pic AS activity_followed_user_pic \nFROM activity \nWHERE activity.username = %(username_1)s ORDER BY activity.timestamp DESC \n LIMIT %(param_1)s, %(param_2)s"}
+{"timestamp": "2025-08-12 12:01:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00080s] {'username_1': 'user9', 'param_1': 0, 'param_2': 10}"}
+{"timestamp": "2025-08-12 12:01:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 12:01:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:01:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:01:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 449.4s ago] {'username_1': 'karthik', 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:01:54 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 380.3s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 460.5s ago] {'username_1': 'user9', 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 460.5s ago] {'username_1': 'karthik', 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT follow.follower_id AS follow_follower_id, follow.following_id AS follow_following_id \nFROM follow \nWHERE follow.follower_id = %(follower_id_1)s AND follow.following_id = %(following_id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00074s] {'follower_id_1': 24, 'following_id_1': 5, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "INSERT INTO activity (username, timestamp, liked_post_id, username_liked, liked_post_image, followed_username, followed_user_pic) VALUES (%(username)s, now(), %(liked_post_id)s, %(username_liked)s, %(liked_post_image)s, %(followed_username)s, %(followed_user_pic)s)"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 243.2s ago] {'username': 'user9', 'liked_post_id': None, 'username_liked': None, 'liked_post_image': None, 'followed_username': 'karthik', 'followed_user_pic': 'string'}"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "UPDATE user SET followers_count=%(followers_count)s WHERE user.id = %(user_id)s"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00086s] {'followers_count': 4, 'user_id': 5}"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "UPDATE user SET following_count=%(following_count)s WHERE user.id = %(user_id)s"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00255s] {'following_count': 1, 'user_id': 24}"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "INSERT INTO follow (follower_id, following_id) VALUES (%(follower_id)s, %(following_id)s)"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00160s] {'follower_id': 24, 'following_id': 5}"}
+{"timestamp": "2025-08-12 12:02:06 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:02:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:02:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 388.3s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 388.3s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT follow.follower_id AS follow_follower_id, follow.following_id AS follow_following_id \nFROM follow INNER JOIN user ON user.id = follow.following_id \nWHERE follow.follower_id = %(follower_id_1)s"}
+{"timestamp": "2025-08-12 12:02:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00057s] {'follower_id_1': 24}"}
+{"timestamp": "2025-08-12 12:02:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(pk_1)s"}
+{"timestamp": "2025-08-12 12:02:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00072s] {'pk_1': 5}"}
+{"timestamp": "2025-08-12 12:02:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 12:02:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:02:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 393s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 393s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT follow.follower_id AS follow_follower_id, follow.following_id AS follow_following_id \nFROM follow INNER JOIN user ON user.id = follow.follower_id \nWHERE follow.following_id = %(following_id_1)s \n LIMIT %(param_1)s, %(param_2)s"}
+{"timestamp": "2025-08-12 12:02:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00142s] {'following_id_1': 24, 'param_1': 0, 'param_2': 10}"}
+{"timestamp": "2025-08-12 12:02:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 407s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 487.2s ago] {'username_1': 'user9', 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 487.2s ago] {'username_1': 'karthik', 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT follow.follower_id AS follow_follower_id, follow.following_id AS follow_following_id \nFROM follow \nWHERE follow.follower_id = %(follower_id_1)s AND follow.following_id = %(following_id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 26.71s ago] {'follower_id_1': 24, 'following_id_1': 5, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 487.3s ago] {'username_1': 'karthik', 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 407s ago] {'id_1': 5, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT follow.follower_id AS follow_follower_id, follow.following_id AS follow_following_id \nFROM follow INNER JOIN user ON user.id = follow.follower_id \nWHERE follow.following_id = %(following_id_1)s \n LIMIT %(param_1)s, %(param_2)s"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 14.02s ago] {'following_id_1': 5, 'param_1': 0, 'param_2': 10}"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(pk_1)s"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00093s] {'pk_1': 4}"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(pk_1)s"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 0.007341s ago] {'pk_1': 6}"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(pk_1)s"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 0.009496s ago] {'pk_1': 9}"}
+{"timestamp": "2025-08-12 12:02:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 420.4s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 500.6s ago] {'username_1': 'user9', 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 500.6s ago] {'username_1': 'karthik', 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT follow.follower_id AS follow_follower_id, follow.following_id AS follow_following_id \nFROM follow \nWHERE follow.follower_id = %(follower_id_1)s AND follow.following_id = %(following_id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 40.05s ago] {'follower_id_1': 24, 'following_id_1': 5, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "UPDATE user SET followers_count=%(followers_count)s WHERE user.id = %(user_id)s"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 40.02s ago] {'followers_count': 3, 'user_id': 5}"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "UPDATE user SET following_count=%(following_count)s WHERE user.id = %(user_id)s"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 40.02s ago] {'following_count': 0, 'user_id': 24}"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DELETE FROM follow WHERE follow.follower_id = %(follower_id)s AND follow.following_id = %(following_id)s"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[generated in 0.00050s] {'follower_id': 24, 'following_id': 5}"}
+{"timestamp": "2025-08-12 12:02:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:02:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:02:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.id = %(id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 426.4s ago] {'id_1': 24, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 506.6s ago] {'username_1': 'user9', 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 506.6s ago] {'username_1': 'karthik', 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT follow.follower_id AS follow_follower_id, follow.following_id AS follow_following_id \nFROM follow \nWHERE follow.follower_id = %(follower_id_1)s AND follow.following_id = %(following_id_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 46.04s ago] {'follower_id_1': 24, 'following_id_1': 5, 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT user.id AS user_id, user.email AS user_email, user.username AS user_username, user.name AS user_name, user.hashed_password AS user_hashed_password, user.created_at AS user_created_at, user.dob AS user_dob, user.gender AS user_gender, user.profile_pic AS user_profile_pic, user.bio AS user_bio, user.location AS user_location, user.followers_count AS user_followers_count, user.following_count AS user_following_count \nFROM user \nWHERE user.username = %(username_1)s \n LIMIT %(param_1)s"}
+{"timestamp": "2025-08-12 12:02:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[cached since 506.6s ago] {'username_1': 'karthik', 'param_1': 1}"}
+{"timestamp": "2025-08-12 12:02:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "ROLLBACK"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:36 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:22:45 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:33:49 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:40:13 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:40:13 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:13 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:40:13 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:13 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:40:13 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:13 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:40:13 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:40:13 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:40:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:40:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:40:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:40:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:40:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:40:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:14 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:40:33 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:40:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:40:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:40:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:39 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:40:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:41:03 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:41:03 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:03 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:41:03 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:03 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:41:03 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:03 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:41:03 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:41:03 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:04 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:41:04 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:04 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:41:04 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:04 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:41:04 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:04 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:41:04 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:04 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:41:04 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:04 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:41:04 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:04 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:46 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:51 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:56 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:41:59 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:11 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:42:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:26 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:42:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:44:29 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:44:30 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:37 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:41 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:46:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:46:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:46:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:46:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:46:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:46:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:46:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:46:52 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:53 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:46:53 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:53 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:46:53 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:53 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:46:53 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:53 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:46:53 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:46:53 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:18 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:47:31 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:08 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:19 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:24 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:32 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:48:34 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT DATABASE()"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@sql_mode"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "SELECT @@lower_case_table_names"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "BEGIN (implicit)"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_hashtags`"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`post_likes`"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`posts`"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`hashtags`"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`follow`"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`user`"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "DESCRIBE `social_media`.`activity`"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "[raw sql] {}"}
+{"timestamp": "2025-08-12 12:52:15 IST", "level": "INFO", "logger": "sqlalchemy.engine.Engine", "message": "COMMIT"}

@@ -11,7 +11,7 @@ from jose import jwt,JWTError
 from database import get_db
 from config import settings
 from logger import log_security_event
-from security_utils import account_protection
+from security_utils import account_protection, sanitizer
 
 bcyrpt_context=CryptContext(schemes=["bcrypt"],deprecated="auto")
 oauth2_bearer=OAuth2PasswordBearer(tokenUrl="/v1/auth/login")
@@ -64,18 +64,27 @@ async def get_current_user(db:Session=Depends(get_db), token:str=Depends(oauth2_
 #get user from user_id
 async def get_user_from_id(db:Session, user_id:int):
     return db.query(User).filter(User.id==user_id).first()
-  
+
+#create new user
 async def create_user(db:Session, user:UserCreate):
+  # Additional sanitization at service layer (defense in depth)
+  sanitized_email = sanitizer.sanitize_html(user.email.lower().strip())
+  sanitized_username = sanitizer.sanitize_html(user.username.lower().strip())
+  sanitized_name = sanitizer.sanitize_html(user.name) if user.name else None
+  sanitized_bio = sanitizer.sanitize_html(user.bio) if user.bio else None
+  sanitized_location = sanitizer.sanitize_html(user.location) if user.location else None
+  sanitized_profile_pic = sanitizer.sanitize_html(user.profile_pic) if user.profile_pic else None
+  
   db_user=User(
-    email=user.email.lower().strip(),
-    username=user.username.lower().strip(),
+    email=sanitized_email,
+    username=sanitized_username,
     hashed_password=bcyrpt_context.hash(user.hashed_password),
     dob=user.dob or None,
     gender=user.gender or None,
-    bio=user.bio or None,
-    location=user.location or None,
-    profile_pic =user.profile_pic or None,
-    name=user.name or None
+    bio=sanitized_bio,
+    location=sanitized_location,
+    profile_pic=sanitized_profile_pic,
+    name=sanitized_name
   )
   db.add(db_user)
   db.commit()
@@ -161,12 +170,13 @@ async def authenticate(db:Session, username:str, password:str, client_ip: str = 
 
 #update user
 async def update_user(db:Session, db_user:User, user:UserUpdate):
-    db_user.name = user.name
+    # Additional sanitization at service layer (defense in depth)
+    db_user.name = sanitizer.sanitize_html(user.name) if user.name else None
     db_user.dob = user.dob
     db_user.gender = user.gender
-    db_user.bio = user.bio
-    db_user.location = user.location
-    db_user.profile_pic = user.profile_pic
+    db_user.bio = sanitizer.sanitize_html(user.bio) if user.bio else None
+    db_user.location = sanitizer.sanitize_html(user.location) if user.location else None
+    db_user.profile_pic = sanitizer.sanitize_html(user.profile_pic) if user.profile_pic else None
     db.commit()
 
 

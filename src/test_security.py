@@ -134,12 +134,12 @@ class SecurityTester:
         print("\nTESTING PASSWORD VALIDATION")
         
         weak_passwords = [
-            "123456",      # Too short and common
-            "password",    # Common password
-            "abc123",      # No uppercase/special chars
-            "PASSWORD",    # No lowercase/numbers
-            "Pass123",     # No special characters
-            "Pass@",       # Too short
+            "123456",      
+            "password",   
+            "abc123",     
+            "PASSWORD",    
+            "Pass123",     
+            "Pass@",     
         ]
         
         passed_tests = 0
@@ -362,7 +362,6 @@ class SecurityTester:
         print(f"\nDetailed results saved to: security_test_results.json")
 
 if __name__ == "__main__":
-    print("Make sure your FastAPI server is running on http://localhost:8000")
     input("Press Enter when server is ready...")
     
     tester = SecurityTester()

@@ -6,6 +6,7 @@ from auth.schemas import User as UserSchema
 from .models import Post,post_hashtags,Hashtag
 from auth.models import User
 from activity.models import Activity
+from security_utils import sanitizer
 
 #create hashtag
 async def create_hashtag_svc(db:Session,post:Post):
@@ -23,10 +24,15 @@ async def create_hashtag_svc(db:Session,post:Post):
 
 #create a post
 async def create_post_svc(db:Session,post:PostCreate,user_id:int):
+    # Additional sanitization at service layer (defense in depth)
+    sanitized_content = sanitizer.sanitize_html(post.content) if post.content else ""
+    sanitized_image = sanitizer.sanitize_html(post.image) if post.image else None
+    sanitized_location = sanitizer.sanitize_html(post.location) if post.location else None
+    
     db_post=Post(
-      content=post.content,
-      image=post.image,
-      location=post.location,
+      content=sanitized_content,
+      image=sanitized_image,
+      location=sanitized_location,
       author_id=user_id
       )
     await create_hashtag_svc(db,db_post)
