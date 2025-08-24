@@ -22,8 +22,12 @@ jobs:
 
     - name: Install Snyk CLI
       run: npm install -g snyk
-
     - name: Snyk test
       run: snyk test
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+    - name: Snyk fix (auto-upgrade vulnerable dependencies)
+      run: snyk fix
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
