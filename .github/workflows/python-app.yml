@@ -27,3 +27,7 @@ jobs:
       run: snyk test
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+    - name: Snyk fix (auto-upgrade vulnerable dependencies)
+      run: snyk fix
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
