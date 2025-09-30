@@ -27,7 +27,7 @@ app=FastAPI(
     } # to keep user logged in
 )
 
-# Security Headers Middleware
+# Security Headers Middleware - secure the application
 @app.middleware("http")
 async def add_security_headers(request: Request, call_next):
     response = await call_next(request)
